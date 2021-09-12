@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function doOpenCheck(chk){
+            var obj = document.getElementsByName("happy");
+            for(var i=0; i<obj.length; i++){
+            if(obj[i] != chk){
+                obj[i].checked = false;
+        }
+    }
+}
+    </script>
+    <style>
+        form ul li{
+            list-style:none;
+            
+            margin: 10px 0;
+            }
+        
+
+        
+        
+     </style>
+    
+    
+</head>
+<body>
+    <form action="로그인">
+        <h1>Mailing List</h1>
+        <span>
+            E-mail <input type="email" name="email" placeholder="이메일을 입력해주세요">
+            <input type="submit" value="delete"  >
+            <input type="reset" value="reset">
+        </span>
+    </form>
+    <form action="아이디">
+        <h1>Login</h1>
+        ID : <input type="text" name="id" placeholder="아이디를 입력해주세요">
+        PW : <input type="password" name="password" placeholder="비밀번호를 입력해주세요">
+        <input type="submit" value="Login" id="Login">
+        <h1>여름방학 특강 신청하기</h1> 
+    </form>
+    <form>
+        
+        <fieldset>
+            <legend>교육과정</legend>
+            <label >
+                영어회화&emsp;
+                <input type="text" placeholder="오전 9 : 00 ~ 11 : 00">(초급레벨)
+            </label>
+    </fieldset>
+    </form>
+    <form>
+        <fieldset>
+            <legend>신청자 기본정보</legend>
+            <label>
+                <ul>
+                
+                    <li>이름 &emsp; <input type="text"></li>
+                
+                    <li>이메일 &emsp; <input type="email"></li>
+                
+                
+                    <li>비밀번호 &emsp; <input type="password"></li>
+               
+               
+                    <li>학과&emsp; 
+                    <select>
+                        <option value="학과를 선택하세요">학과를 선택하세요</option>
+                        <option value="">기계공학과</option>
+                        <option value="">건축공학과</option>
+                        <option value="">전자공학과</option>
+                        <option value="">컴퓨터공학과</option>
+                        
+                    </select></li>
+                    <li>성별 <input type="radio" name="gender">남자
+                        <input type="radio" name="gender">여자
+                    </li>
+                    <li>
+                        관심사 <input type="checkbox" name="happy" onclick="doOpenCheck(this);">여행
+                        <input type="checkbox" name="happy" onclick="doOpenCheck(this);">게임
+                        <input type="checkbox" name="happy" onclick="doOpenCheck(this);">공연
+                        <input type="checkbox" name="happy" onclick="doOpenCheck(this);">운동
+                        <input type="checkbox" name="happy" onclick="doOpenCheck(this);">기타
+                    </li>
+                
+                </ul>
+
+                
+
+
+            </label>
+        </fieldset>
+        <input type="submit" value="수강신청">
+        <input type="reset" value="다시쓰기">
+    </form>
+    
+    
+</body>
+</html>
